@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/ezid/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+  <message key="plugins.importexport.ezid.description">Export or register article metadata in CrossRef format or register with EZID.</message>
+  <message key="plugins.importexport.ezid.displayName">EZID Export/Registration Plugin</message>
+  <message key="plugins.importexport.ezid.requirements">Requirements</message>
+  <message key="plugins.importexport.ezid.requirements.satisfied">All plugin requirements are satisfied.</message>
+  <message key="plugins.importexport.ezid.error.pluginNotConfigured"><![CDATA[ezid plugin not configured! Configure this plugin in the plugin's <a href="{$settingsUrl}">settings page</a>.]]></message>
+  <message key="plugins.importexport.ezid.error.DOIsNotAvailable"><![CDATA[DOI Public Identifier plugin not configured! Enable and configure this plugin from the <a href="{$doiUrl}" target="_blank">DOI Plugin</a> Settings page.]]></message>
+  <message key="plugins.importexport.ezid.error.publisherNotConfigured"><![CDATA[A journal publisher has not been configured! You must add a publisher institution under <a href="{$publisherUrl}" target="_blank">Journal Setup Step 1.5</a>.]]></message>
+  <message key="plugins.importexport.ezid.error.issnNotConfigured"><![CDATA[Journal Online ISSN has not been configured! You must apply one and add it under <a href="{$issnUrl}" target="_blank">Journal Setup Step 1.1</a>.]]></message>
+  <message key="plugins.importexport.ezid.settings.depositorIntro">The following items are required for a successful ezid deposit.</message>
+  
+
+  
+  <message key="plugins.importexport.ezid.settings.form.automaticRegistration">Register DOIs automatically</message>
+  <message key="plugins.importexport.ezid.settings.form.automaticRegistration.description"><![CDATA[OJS will deposit article DOIs automatically to ezid as articles are published. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs in the <a href="{$unregisteredArticlesUrl}">unregistered articles listing</a>.]]></message>
+
+  <message key="plugins.importexport.ezid.registrationIntro"><![CDATA[This plugin can be configured to automatically register Digital Object Identifiers (DOIs) with EZID. You will need a username and password (available from <a href="http://ezid.cdlib.org/" target="_blank">ezid</a>) in order to do so. If you do not have your own username and password you can still export into the CrossRef XML format, but you cannot register your DOIs with EZID from within OJS.]]></message>
+
+  <message key="plugins.importexport.ezid.settings.description"><![CDATA[You can <a href="{$settingsUrl}">configure the EZID export/registration plug-in here</a>.]]></message>
+
+  <message key="plugins.importexport.ezid.settings.form.description">Please configure the EZID export/registration plug-in:</message>
+  <message key="plugins.importexport.ezid.settings.form.username">Username</message>
+  <message key="plugins.importexport.ezid.settings.form.username.description">Please enter the username you got from EZID (EZID provides an "apitest" account for creating test identifiers only).</message>
+  <message key="plugins.importexport.ezid.settings.form.password.description">Please enter the password you got from EZID (apitest for "apitest" account).</message>
+  <message key="plugins.importexport.ezid.settings.form.userNameRequired">Please enter the username you got from EZID.</message>
+  <message key="plugins.importexport.ezid.settings.form.userPasswordRequired">Please enter the password you got from EZID.</message>
+  <message key="plugins.importexport.ezid.settings.form.shoulder">DOI Shoulder</message>
+  <message key="plugins.importexport.ezid.settings.form.shoulder.description">Please enter the DOI shoulder you got from EZID (10.5072/FK2 for test purpose) and in the format 10.xxxx/xxx.</message>
+  <message key="plugins.importexport.ezid.export.unregistered">Unregistered Articles</message>
+  <message key="plugins.importexport.ezid.export.selectUnregistered">Select unregistered Articles</message>
+  <message key="plugins.importexport.ezid.export.noUnregistered">All published articles have already been registered (or none of them has a DOI assigned).</message>
+
+  <message key="plugins.importexport.ezid.cliUsage"><![CDATA[Usage:
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...
+]]></message>
+
+  <message key="plugins.importexport.ezid.export.error.articleDatePublishedMissing">The date published is missing for the article with ID {$param}.</message>
+
+  <message key="plugins.importexport.ezid.update">Edit</message>
+  <message key="plugins.importexport.ezid.updateDescription">Click this button to update the meta-data of this object with EZID. This only works if you successfully registered the object before!</message>
+</locale>
