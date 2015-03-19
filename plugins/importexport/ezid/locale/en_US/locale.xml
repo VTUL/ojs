@@ -25,7 +25,7 @@
 
   
   <message key="plugins.importexport.ezid.settings.form.automaticRegistration">Register DOIs automatically</message>
-  <message key="plugins.importexport.ezid.settings.form.automaticRegistration.description"><![CDATA[OJS will deposit article DOIs automatically to ezid as articles are published. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs in the <a href="{$unregisteredArticlesUrl}">unregistered articles listing</a>.]]></message>
+  <message key="plugins.importexport.ezid.settings.form.automaticRegistration.description"><![CDATA[OJS will assign article DOIs automatically with EZID as articles are published. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs in the <a href="{$unregisteredArticlesUrl}">unregistered articles listing</a>.]]></message>
 
   <message key="plugins.importexport.ezid.registrationIntro"><![CDATA[This plugin can be configured to automatically register Digital Object Identifiers (DOIs) with EZID. You will need a username and password (available from <a href="http://ezid.cdlib.org/" target="_blank">ezid</a>) in order to do so. If you do not have your own username and password you can still export into the CrossRef XML format, but you cannot register your DOIs with EZID from within OJS.]]></message>
 
