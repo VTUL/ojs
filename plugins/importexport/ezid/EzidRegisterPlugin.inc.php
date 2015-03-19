@@ -295,22 +295,22 @@ class EzidRegisterPlugin extends DOIExportPlugin {
     assert(is_readable($filename));
     $payload = file_get_contents($filename);
     assert($payload !== false && !empty($payload));
-    // we only consider article here
+    // we only consider articles and issues here
     $result = true;
 
-    if (is_a($object, 'PublishedArticle')) {
-      $input = "_profile: datacite" . PHP_EOL;
+    if (is_a($object, 'PublishedArticle') || is_a($object, 'Issue') ) {      
       
-      
-      $input .= "_profile: crossref" . PHP_EOL;
+      $input = "_profile: crossref" . PHP_EOL;
       $input .= "crossref: " . $this->_doiMetadataEscape($payload) . PHP_EOL;
-      //echo nl2br(htmlentities($input));
-      // 5 required datacite fields:
+      
+      // TODO: SHOW BOTH DATACITE METADATA AS WELL
+      //5 required datacite fields:
       $input .= "datacite.creator: ";
-      foreach ($object->getAuthors() as $author) {
-        $input .= $author->getLastName() . ", " . $author->getFirstName() . " " . $author->getMiddleName() . "; ";
-      }
-
+      if (is_a($object, 'PublishedArticle')) {
+        foreach ($object->getAuthors() as $author) {
+          $input .= $author->getLastName() . ", " . $author->getFirstName() . " " . $author->getMiddleName() . "; ";
+        }
+      } 
       $input .= PHP_EOL;
       $input .= "datacite.title: " . $object->getLocalizedTitle() . PHP_EOL;
       $input .= "datacite.publisher: " . $journal->getSetting('publisherInstitution') . PHP_EOL;

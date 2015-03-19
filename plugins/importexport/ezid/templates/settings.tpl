@@ -18,7 +18,7 @@
   <br />
 
   {capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
-  {capture assign="unregisteredArticlesUrl"}{plugin_url path="all" op="importexport"}{/capture}
+  {capture assign="unregisteredArticlesUrl"}{plugin_url op='importexport' path="all"}{/capture}
   {url|assign:"publisherUrl" page="manager" op="setup" path="1" anchor='setupPublisher'}
   {url|assign:"issnUrl" page="manager" op="setup" path="1" anchor='generalInformation'}
   {url|assign:"doiUrl" page="manager" op="plugin" path="pubIds"}
