@@ -1,0 +1,49 @@
+================================
+=== OJS EZID Plugin
+=== Version: 1.0
+=== Author: Tingting Jiang
+=== Last update: 19. March 2015  
+================================
+
+About
+-----
+This plugin enables the registration and DOI assigning of issue or article file with EZID and export metadata in CrossRef format.
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. See the file COPYING for the 
+complete terms of this license.
+
+System Requirements
+-------------------
+Same requirements as the OJS 2.4.5 core.
+
+Location
+---------
+To see the plugins, login as journal manager of a journal on ejournalsdev.vt.edu.
+
+EZID DOI plugin is in Journal Management>>System Plugins>>Import/Export Plugins>>EZID EXPORT/REGISTRATION PLUGIN. Enable the plugin, if necessary, and then select "IMPORT/EXPORT DATA."
+
+Alternatively, go through Journal Management>>Import/Export Data>>EZID EXPORT/REGISTRATION PLUGIN. Then you can directly reach the "import/export data" page.
+
+Settings
+---------------
+For first time user, configure the plugin under "Settings." Two required configurations are setup through Journal's setup page: Journal publisher and Journal online ISSN.
+To export metadata in CrossRef XML format only, username/password/shoulder fields are optional. If registration and DOI assigning with EZID are needed, username/password/shoulder fields need to be filled out. 
+
+Export Data and Register DOIs
+---------------
+"Unregistered Articles" link will direct you to the page listing all the articles of this journal have not registered (been assigned DOIs) with EZID. From there, individual article can be assigned DOI as well as exported in CrossRef xml file by clicking on the "REGISTER" or "EXPORT" link on the same row of each article. Towards the bottom of the page, selected articles can be batch registered as well as batch exported by clicking on the buttons "Register" and "EXPORT." All the articles on the page can be selected at once by clicking on the "Select All" button.
+
+"All Articles" link will direct you to the page listing all the articles of this journal, including registered and not registered articles. From there, for individual article, if it has not registered with EZID before, it can be assigned DOI by clicking on the "REGISTER"; if it has DOI already, then the link will be shown as "EDIT" and its DOI can be reassigned with updated metadata being recorded. By clicking on the "EXPORT" link, the metadata for the article can be exported in CrossRef xml file. Towards the bottom of the page, selected articles can be batch registered as well as batch exported by clicking on the buttons "Register" and "EXPORT." All the articles on the page can be selected at once by clicking on the "Select All" button. For each article, if it has DOI assigned, the STATUS column will show the DOI as a link which can redirect to the actual EZID DOI link with all the metadata populated.
+
+"All Issues" link will direct you to the page listing all the issues of this journal. You can perform similar actions on all the issues as to the page for all the articles described above.
+
+Auto-register with EZID and auto-assign DOIs
+---------------
+In the "Settings" page, the journal manager can click on the "Register DOIs automatically" checkbox, then this plugin will assign article DOIs automatically for articles that are published and yet registered with EZID before.
+
+Version History
+---------------
+1.0	- Initial Release
+
